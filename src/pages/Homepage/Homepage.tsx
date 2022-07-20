@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Flex, Input, Text, Button, Heading } from '@chakra-ui/react';
 import HeadingWrapper from '../../components/HeadingWrapper/HeadingWrapper';
+import ProductCard from '../../components/ProductCards/ProductCard';
 
 const Homepage = () => {
   return (
@@ -13,6 +14,23 @@ const Homepage = () => {
       {/* Recent Items */}
       <HeadingWrapper title="Latest Products">
         <Text>Products</Text>
+        <Grid
+          rowGap={"2rem"}
+          columnGap={"1rem"}
+          templateColumns={[
+            "1fr",
+            "1fr",
+            "repeat(2, 1fr)",
+            "repeat(3, 1fr)",
+            "repeat(4, 1fr)",
+          ]}
+        >
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </Grid>
       </HeadingWrapper>
 
       {/* Popular Items */}
